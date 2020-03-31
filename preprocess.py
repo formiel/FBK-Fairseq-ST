@@ -273,7 +273,9 @@ def main(args):
                 nsamp += tensor.size(0)
             return {'nseq': nseq, 'nsamp': nsamp}
 
-        input_file = '{}{}'.format(input_prefix, ('.' + lang) if lang is not None else '')
+        # input_file = '{}{}'.format(input_prefix, ('.' + lang) if lang is not None else '')
+        input_file = '{}{}'.format(input_prefix, ('.' + args.format) if lang is not None else '')
+        print(f'input_file: {input_file}')
         audio_reader = get_reader(args.format)
         res = binarize(input_file, audio_reader, consumer)
         print('| [{}] {}: {} audio_seq, {} audio_samples'.format(

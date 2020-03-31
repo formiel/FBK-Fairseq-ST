@@ -105,3 +105,5 @@ ENV/
 
 # Generated files
 fairseq/temporal_convolution_tbc
+_NOTES
+create_data_links.py
