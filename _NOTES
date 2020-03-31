@@ -1,8 +1,0 @@
-python setup.py build develop --user
-
-python preprocess.py -s en -t es --format h5 --inputtype audio \
-	--trainpref /gpfsscratch/rech/wod/umz16dj/Data/MUSTC_fairseq/raw/en-es/train/train \
-    --validpref /gpfsscratch/rech/wod/umz16dj/Data/MUSTC_fairseq/raw/en-es/dev/dev \
-	--testpref /gpfsscratch/rech/wod/umz16dj/Data/MUSTC_fairseq/raw/en-es/tst-COMMON/tst-COMMON \
-    --destdir /gpfsscratch/rech/wod/umz16dj/Data/MUSTC_fairseq/binarized/en-es/ \
-    |& tee output_preprocess_es.log
